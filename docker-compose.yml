@@ -1,0 +1,9 @@
+services:
+  bot:
+    build: .
+    container_name: telegram_rp_bot
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - ./bot_data.db:/app/bot_data.db

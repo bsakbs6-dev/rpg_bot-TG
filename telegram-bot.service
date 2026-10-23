@@ -1,0 +1,15 @@
+[Unit]
+Description=Telegram Roleplay Bot (Gemini & OpenRouter)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/telegram_rp_bot
+ExecStart=/opt/telegram_rp_bot/venv/bin/python main.py
+Restart=always
+RestartSec=5
+EnvironmentFile=/opt/telegram_rp_bot/.env
+
+[Install]
+WantedBy=multi-user.target
